@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Jungle Adventure - KIDOBO</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="dashboard.html" class="back-btn">←</a>
+            <h1>The Jungle Adventure</h1>
+            <div class="story-actions">
+                <button class="action-btn">🔖</button>
+                <button class="action-btn">🔊</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="story-container">
+        <div class="story-page active">
+            <img src="https://via.placeholder.com/300x200" alt="Story illustration" class="story-image">
+            <div class="story-text">
+                <p>Once upon a time, in a deep green jungle, lived a curious little monkey named Milo.</p>
+                <p>Milo loved to explore and discover new things every day.</p>
+            </div>
+            <a href="#page2" class="interactive-btn">🐵 Click to see Milo!</a>
+        </div>
+        
+        <div id="page2" class="story-page">
+            <img src="https://via.placeholder.com/300x200/ff9999" alt="Story illustration" class="story-image">
+            <div class="story-text">
+                <p>One morning, Milo found a shiny object near the river.</p>
+                <p>"What could this be?" he wondered, touching it carefully.</p>
+            </div>
+            <a href="#quiz1" class="interactive-btn">💎 What is it?</a>
+        </div>
+        
+        <div id="quiz1" class="story-page quiz-page">
+            <h3>Quiz Time!</h3>
+            <p>What did Milo find near the river?</p>
+            <div class="quiz-options">
+                <button class="quiz-option">A banana</button>
+                <button class="quiz-option">A leaf</button>
+                <button class="quiz-option correct">A shiny object</button>
+                <button class="quiz-option">A friend</button>
+            </div>
+            <div class="quiz-feedback">
+                <p class="feedback-text">Great job! That's correct!</p>
+                <a href="#page3" class="btn-primary">Continue Story</a>
+            </div>
+        </div>
+        
+        <div id="page3" class="story-page">
+            <img src="https://via.placeholder.com/300x200/99ff99" alt="Story illustration" class="story-image">
+            <div class="story-text">
+                <p>It was a golden key! Milo had never seen anything like it before.</p>
+                <p>"Where does this key belong?" he thought excitedly.</p>
+            </div>
+            <a href="#page4" class="interactive-btn">🔑 Continue the adventure!</a>
+        </div>
+        
+        <div id="page4" class="story-page end-page">
+            <img src="https://via.placeholder.com/300x200/9999ff" alt="Story illustration" class="story-image">
+            <div class="story-text">
+                <p>Milo's adventure continues tomorrow! What do you think he'll find?</p>
+            </div>
+            <div class="story-end-actions">
+                <a href="dashboard.html" class="btn-primary">Back to Library</a>
+                <button class="btn-secondary">Rate this story</button>
+            </div>
+        </div>
+    </main>
+    
+    <div class="page-indicator">
+        <span class="current-page">1</span> of <span class="total-pages">5</span>
+    </div>
+</body>
+</html>

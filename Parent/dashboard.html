@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard - KIDOBO</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>KIDOBO Parent Dashboard</h1>
+            <div class="user-actions">
+                <button class="btn-icon">⚙️</button>
+                <button class="btn-icon">👤</button>
+            </div>
+        </div>
+        <nav class="parent-nav">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="#">Children</a>
+            <a href="#">Progress</a>
+            <a href="#">Settings</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="children-section">
+            <h2>Your Children</h2>
+            <div class="children-list">
+                <div class="child-card active">
+                    <img src="https://via.placeholder.com/80" alt="Child photo" class="child-photo">
+                    <div class="child-info">
+                        <h3>Alex</h3>
+                        <p>Age: 6</p>
+                        <div class="reading-stats">
+                            <div class="stat">
+                                <span class="stat-value">12</span>
+                                <span class="stat-label">Books</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">8h</span>
+                                <span class="stat-label">This week</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">85%</span>
+                                <span class="stat-label">Quizzes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="child-card">
+                    <img src="https://via.placeholder.com/80" alt="Child photo" class="child-photo">
+                    <div class="child-info">
+                        <h3>Sophie</h3>
+                        <p>Age: 8</p>
+                        <div class="reading-stats">
+                            <div class="stat">
+                                <span class="stat-value">18</span>
+                                <span class="stat-label">Books</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">5h</span>
+                                <span class="stat-label">This week</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">92%</span>
+                                <span class="stat-label">Quizzes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="add-child-btn">+ Add Child</button>
+            </div>
+        </section>
+        
+        <section class="progress-section">
+            <h2>Reading Progress</h2>
+            <div class="progress-graph">
+                <div class="graph-placeholder">
+                    <!-- In a real app, this would be a chart -->
+                    <p>Weekly reading time graph would appear here</p>
+                </div>
+                <div class="graph-legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #4a6baf;"></span>
+                        <span>Alex</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: #ff9a76;"></span>
+                        <span>Sophie</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="recent-activity">
+            <h2>Recent Activity</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">📖</div>
+                    <div class="activity-details">
+                        <p><strong>Alex</strong> started reading <em>The Jungle Adventure</em></p>
+                        <p class="activity-time">2 hours ago</p>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">✅</div>
+                    <div class="activity-details">
+                        <p><strong>Sophie</strong> completed <em>Space Explorers</em> with 100% quiz score</p>
+                        <p class="activity-time">Yesterday</p>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-icon">🏆</div>
+                    <div class="activity-details">
+                        <p><strong>Alex</strong> earned the "Bookworm" badge</p>
+                        <p class="activity-time">2 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

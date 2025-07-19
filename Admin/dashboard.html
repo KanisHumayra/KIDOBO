@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - KIDOBO</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>KIDOBO Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="active">
+                    <span class="icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#">
+                    <span class="icon">📚</span>
+                    <span>Content</span>
+                </a>
+                <a href="#">
+                    <span class="icon">👥</span>
+                    <span>Users</span>
+                </a>
+                <a href="#">
+                    <span class="icon">📈</span>
+                    <span>Analytics</span>
+                </a>
+                <a href="#">
+                    <span class="icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </aside>
+        
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Content Management</h1>
+                <div class="admin-actions">
+                    <a href="#" class="btn-primary">
+                        <span class="icon">+</span>
+                        <span>Add New Story</span>
+                    </a>
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search content...">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="content-filters">
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select>
+                        <option>All Categories</option>
+                        <option>Animals</option>
+                        <option>Adventure</option>
+                        <option>Fantasy</option>
+                        <option>Science</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Difficulty:</label>
+                    <select>
+                        <option>All Levels</option>
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Status:</label>
+                    <select>
+                        <option>All Statuses</option>
+                        <option>Published</option>
+                        <option>Draft</option>
+                        <option>Archived</option>
+                    </select>
+                </div>
+                
+                <button class="btn-secondary">Apply Filters</button>
+                <button class="btn-text">Reset</button>
+            </section>
+            
+            <section class="content-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Difficulty</th>
+                            <th>Status</th>
+                            <th>Views</th>
+                            <th>Avg. Rating</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Jungle Adventure</td>
+                            <td>Animals</td>
+                            <td><span class="badge easy">Easy</span></td>
+                            <td><span class="badge published">Published</span></td>
+                            <td>1,245</td>
+                            <td>⭐ 4.8</td>
+                            <td>
+                                <a href="#" class="action-btn">✏️</a>
+                                <a href="#" class="action-btn">👁️</a>
+                                <a href="#" class="action-btn">🗑️</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Space Explorers</td>
+                            <td>Science</td>
+                            <td><span class="badge medium">Medium</span></td>
+                            <td><span class="badge published">Published</span></td>
+                            <td>892</td>
+                            <td>⭐ 4.5</td>
+                            <td>
+                                <a href="#" class="action-btn">✏️</a>
+                                <a href="#" class="action-btn">👁️</a>
+                                <a href="#" class="action-btn">🗑️</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dinosaur Friends</td>
+                            <td>Animals</td>
+                            <td><span class="badge easy">Easy</span></td>
+                            <td><span class="badge published">Published</span></td>
+                            <td>1,532</td>
+                            <td>⭐ 4.9</td>
+                            <td>
+                                <a href="#" class="action-btn">✏️</a>
+                                <a href="#" class="action-btn">👁️</a>
+                                <a href="#" class="action-btn">🗑️</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>The Magic Castle</td>
+                            <td>Fantasy</td>
+                            <td><span class="badge hard">Hard</span></td>
+                            <td><span class="badge draft">Draft</span></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>
+                                <a href="#" class="action-btn">✏️</a>
+                                <a href="#" class="action-btn">👁️</a>
+                                <a href="#" class="action-btn">🗑️</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ocean Discovery</td>
+                            <td>Science</td>
+                            <td><span class="badge medium">Medium</span></td>
+                            <td><span class="badge archived">Archived</span></td>
+                            <td>756</td>
+                            <td>⭐ 4.2</td>
+                            <td>
+                                <a href="#" class="action-btn">✏️</a>
+                                <a href="#" class="action-btn">👁️</a>
+                                <a href="#" class="action-btn">🗑️</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="table-pagination">
+                    <button class="pagination-btn" disabled>← Previous</button>
+                    <span class="pagination-page">Page 1 of 3</span>
+                    <a href="#" class="pagination-btn">Next →</a>
+                </div>
+            </section>
+            
+            <section class="quick-stats">
+                <div class="stat-card">
+                    <div class="stat-value">42</div>
+                    <div class="stat-label">Total Stories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">1,284</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">86%</div>
+                    <div class="stat-label">Avg. Quiz Score</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">4.7</div>
+                    <div class="stat-label">Avg. Rating</div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
