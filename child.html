@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIDOBO - Child Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/child.css">
 </head>
 <body>
@@ -43,10 +42,6 @@
                 <img src="assets/images/reward-icon.png" alt="Rewards">
                 <span>Rewards</span>
             </button>
-            <button class="nav-btn" data-section="settings">
-                <img src="assets/images/settings-icon.png" alt="Settings">
-                <span>Settings</span>
-            </button>
         </nav>
         
         <main class="child-main">
@@ -56,33 +51,13 @@
                     <button class="age-btn active" data-age="all">All</button>
                     <button class="age-btn" data-age="4-6">Ages 4-6</button>
                     <button class="age-btn" data-age="7-8">Ages 7-8</button>
-                    <button class="age-btn" data-age="9-10">Ages 9-10</button>
                 </div>
-                
-                <div class="story-grid">
-                    <!-- Stories will be loaded here by JavaScript -->
-                </div>
+                <div class="story-grid"></div>
             </section>
             
             <section id="games-section" class="content-section">
                 <h2>Learning Games</h2>
-                <div class="game-grid">
-                    <div class="game-card" data-game="word-match">
-                        <img src="assets/images/word-match-game.png" alt="Word Match Game">
-                        <h3>Word Match</h3>
-                        <p>Match words with pictures!</p>
-                    </div>
-                    <div class="game-card" data-game="spelling-bee">
-                        <img src="assets/images/spelling-game.png" alt="Spelling Bee Game">
-                        <h3>Spelling Bee</h3>
-                        <p>Spell the words you hear!</p>
-                    </div>
-                    <div class="game-card" data-game="story-quiz">
-                        <img src="assets/images/quiz-game.png" alt="Story Quiz Game">
-                        <h3>Story Quiz</h3>
-                        <p>Test what you remember!</p>
-                    </div>
-                </div>
+                <div class="game-grid"></div>
             </section>
             
             <section id="rewards-section" class="content-section">
@@ -94,82 +69,16 @@
                             <img src="assets/images/badge-first-read.png" alt="First Read Badge">
                             <p>First Story</p>
                         </div>
-                        <div class="badge" data-badge="quiz-master">
-                            <img src="assets/images/badge-quiz.png" alt="Quiz Master Badge">
-                            <p>Quiz Master</p>
-                        </div>
                         <div class="badge locked" data-badge="bookworm">
                             <img src="assets/images/badge-locked.png" alt="Locked Badge">
                             <p>Bookworm</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="progress-container">
-                    <h3>Reading Progress</h3>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%;"></div>
-                    </div>
-                    <p>4 of 10 stories completed</p>
-                </div>
-            </section>
-            
-            <section id="settings-section" class="content-section">
-                <h2>Settings</h2>
-                <div class="settings-options">
-                    <div class="setting">
-                        <h3>Sound</h3>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="setting">
-                        <h3>Music</h3>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="setting">
-                        <h3>Reading Speed</h3>
-                        <select>
-                            <option>Slow</option>
-                            <option selected>Normal</option>
-                            <option>Fast</option>
-                        </select>
-                    </div>
-                    <button id="logout-btn" class="btn btn-primary">Log Out</button>
-                </div>
             </section>
         </main>
-        
-        <div class="story-reader-modal" id="story-reader">
-            <div class="story-reader-content">
-                <button class="close-reader">&times;</button>
-                <div class="story-header">
-                    <h2 id="story-reader-title">Story Title</h2>
-                    <div class="story-controls">
-                        <button id="read-aloud-btn" class="control-btn">
-                            <img src="assets/images/read-aloud-icon.png" alt="Read Aloud">
-                        </button>
-                        <button id="bookmark-btn" class="control-btn">
-                            <img src="assets/images/bookmark-icon.png" alt="Bookmark">
-                        </button>
-                    </div>
-                </div>
-                <div class="story-pages">
-                    <!-- Pages will be loaded here -->
-                </div>
-                <div class="story-navigation">
-                    <button id="prev-page" class="nav-btn">Previous</button>
-                    <span class="page-indicator">Page 1 of 5</span>
-                    <button id="next-page" class="nav-btn">Next</button>
-                </div>
-            </div>
-        </div>
     </div>
-    
+
     <script src="assets/js/child.js"></script>
 </body>
 </html>
