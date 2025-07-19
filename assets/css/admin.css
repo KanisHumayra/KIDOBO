@@ -1,0 +1,477 @@
+/* Admin-specific styles */
+.admin-container {
+    max-width: 100%;
+    background-color: #F8F9FA;
+    min-height: 100vh;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-logo {
+    display: flex;
+    align-items: center;
+}
+
+.admin-logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.admin-logo h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.admin-controls .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.admin-nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    background-color: white;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    gap: 20px;
+}
+
+.admin-nav .nav-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: #666;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.admin-nav .nav-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.admin-nav .nav-btn.active {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.admin-main {
+    padding: 20px;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+}
+
+#add-story-btn {
+    display: flex;
+    align-items: center;
+}
+
+#add-story-btn img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.stories-list {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.story-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.story-item:last-child {
+    border-bottom: none;
+}
+
+.story-cover {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.story-info {
+    flex: 1;
+}
+
+.story-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.story-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.story-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.story-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.story-actions button img {
+    width: 20px;
+    height: 20px;
+}
+
+.story-form-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Comic Neue', cursive;
+}
+
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.image-preview {
+    width: 150px;
+    height: 100px;
+    border: 1px dashed #ddd;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.pages-container {
+    margin-top: 10px;
+}
+
+.page-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.page-item input[type="file"] {
+    flex: 1;
+}
+
+.page-item textarea {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Comic Neue', cursive;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.page-item .page-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page-item .page-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.page-item .page-actions button img {
+    width: 16px;
+    height: 16px;
+}
+
+#add-page-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#add-page-btn img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.user-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #666;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.users-list {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-item:last-child {
+    border-bottom: none;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.user-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.user-actions button img {
+    width: 20px;
+    height: 20px;
+}
+
+.report-filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.report-filters select {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Comic Neue', cursive;
+}
+
+.report-results {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-chart {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.report-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.report-table th, .report-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.report-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.report-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.admin-footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-nav {
+        justify-content: space-around;
+    }
+    
+    .admin-nav .nav-btn span {
+        display: none;
+    }
+    
+    .admin-nav .nav-btn img {
+        margin-right: 0;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .report-filters {
+        flex-direction: column;
+    }
+    
+    .report-filters select, .report-filters button {
+        width: 100%;
+    }
+}

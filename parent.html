@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDOBO - Parent Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/parent.css">
+</head>
+<body>
+    <div class="parent-container">
+        <header class="parent-header">
+            <div class="parent-logo">
+                <img src="assets/images/logo-small.png" alt="KIDOBO Logo">
+                <h1>KIDOBO Parent Dashboard</h1>
+            </div>
+            <div class="parent-controls">
+                <button id="parent-logout" class="btn btn-primary">Log Out</button>
+            </div>
+        </header>
+        
+        <nav class="parent-nav">
+            <button class="nav-btn active" data-section="children">
+                <img src="assets/images/child-icon.png" alt="Children">
+                <span>My Children</span>
+            </button>
+            <button class="nav-btn" data-section="progress">
+                <img src="assets/images/progress-icon.png" alt="Progress">
+                <span>Progress</span>
+            </button>
+            <button class="nav-btn" data-section="settings">
+                <img src="assets/images/settings-icon.png" alt="Settings">
+                <span>Settings</span>
+            </button>
+        </nav>
+        
+        <main class="parent-main">
+            <section id="children-section" class="content-section active">
+                <h2>My Children</h2>
+                <div class="children-list">
+                    <!-- Children will be loaded here -->
+                </div>
+                
+                <button id="add-child-btn" class="btn btn-secondary">
+                    <img src="assets/images/add-icon.png" alt="Add">
+                    Add Child
+                </button>
+                
+                <div class="add-child-form" id="add-child-form" style="display: none;">
+                    <h3>Add New Child</h3>
+                    <form id="child-form">
+                        <div class="form-group">
+                            <label for="child-name">Name</label>
+                            <input type="text" id="child-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="child-age">Age</label>
+                            <input type="number" id="child-age" min="4" max="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Avatar</label>
+                            <div class="avatar-options">
+                                <label>
+                                    <input type="radio" name="avatar" value="avatar1.png" checked>
+                                    <img src="assets/images/avatars/avatar1.png" alt="Avatar 1">
+                                </label>
+                                <label>
+                                    <input type="radio" name="avatar" value="avatar2.png">
+                                    <img src="assets/images/avatars/avatar2.png" alt="Avatar 2">
+                                </label>
+                                <label>
+                                    <input type="radio" name="avatar" value="avatar3.png">
+                                    <img src="assets/images/avatars/avatar3.png" alt="Avatar 3">
+                                </label>
+                                <label>
+                                    <input type="radio" name="avatar" value="avatar4.png">
+                                    <img src="assets/images/avatars/avatar4.png" alt="Avatar 4">
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" id="cancel-add-child" class="btn btn-tertiary">Cancel</button>
+                    </form>
+                </div>
+            </section>
+            
+            <section id="progress-section" class="content-section">
+                <h2>Reading Progress</h2>
+                <div class="progress-filters">
+                    <select id="child-selector">
+                        <option value="all">All Children</option>
+                    </select>
+                    <select id="time-period">
+                        <option value="week">Last 7 Days</option>
+                        <option value="month">Last 30 Days</option>
+                        <option value="all" selected>All Time</option>
+                    </select>
+                </div>
+                
+                <div class="progress-charts">
+                    <div class="chart-container">
+                        <h3>Stories Read</h3>
+                        <div class="chart" id="stories-chart">
+                            <!-- Chart will be rendered here -->
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Reading Time</h3>
+                        <div class="chart" id="time-chart">
+                            <!-- Chart will be rendered here -->
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Quiz Scores</h3>
+                        <div class="chart" id="scores-chart">
+                            <!-- Chart will be rendered here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-details">
+                    <h3>Recent Activity</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Child</th>
+                                <th>Story</th>
+                                <th>Date</th>
+                                <th>Time Spent</th>
+                                <th>Quiz Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activity-table">
+                            <!-- Activity will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <section id="settings-section" class="content-section">
+                <h2>Account Settings</h2>
+                <div class="settings-form">
+                    <form id="parent-settings">
+                        <div class="form-group">
+                            <label for="parent-username">Username</label>
+                            <input type="text" id="parent-username" value="parent1" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="parent-email">Email</label>
+                            <input type="email" id="parent-email" value="parent@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="parent-footer">
+            <p>© 2023 KIDOBO | Parent Dashboard</p>
+        </footer>
+    </div>
+    
+    <script src="assets/js/parent.js"></script>
+</body>
+</html>
+
