@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDOBO - Reading Made Fun</title>
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        .landing {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            color: #4a6baf;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .login-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            width: 350px;
+            text-align: center;
+        }
+        
+        .role-selector {
+            display: flex;
+            justify-content: space-around;
+            margin: 1rem 0;
+        }
+        
+        .role-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            background: #e0e5ec;
+            cursor: pointer;
+        }
+        
+        .role-btn.active {
+            background: #4a6baf;
+            color: white;
+        }
+        
+        .login-form {
+            display: none;
+        }
+        
+        #child-form {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing">
+        <div class="logo">
+            <h1>KIDOBO</h1>
+            <p>Reading Made Fun</p>
+        </div>
+        
+        <div class="login-box">
+            <h2>Welcome!</h2>
+            <p>Please select your role:</p>
+            
+            <div class="role-selector">
+                <a href="#child-form" class="role-btn active">Child</a>
+                <a href="#parent-form" class="role-btn">Parent</a>
+                <a href="#admin-form" class="role-btn">Admin</a>
+            </div>
+            
+            <form id="child-form" class="login-form" action="child/dashboard.html">
+                <input type="text" placeholder="Your name" class="input-field" required>
+                <button type="submit" class="btn-primary">Start Reading!</button>
+            </form>
+            
+            <form id="parent-form" class="login-form" action="parent/dashboard.html">
+                <input type="email" placeholder="Email" class="input-field" required>
+                <input type="password" placeholder="Password" class="input-field" required>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            
+            <form id="admin-form" class="login-form" action="admin/dashboard.html">
+                <input type="email" placeholder="Admin email" class="input-field" required>
+                <input type="password" placeholder="Password" class="input-field" required>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
